@@ -13,14 +13,22 @@ config_version=5
 config/name="Worlds"
 run/main_scene="uid://b38gck5r275ew"
 config/features=PackedStringArray("4.6", "Forward Plus")
+run/max_fps=120
 config/icon="res://test_moritz/icon.svg"
+
+[autoload]
+
+input_buffer="*uid://dj4l68qgdx3cr"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=2
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -54,6 +62,8 @@ interact_e={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=1150.0
+2d/stretch/mode="canvas_items"
 
 [rendering]
 
