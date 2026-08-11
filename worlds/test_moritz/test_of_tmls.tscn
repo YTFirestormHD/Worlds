@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ss423arg6h2h" path="res://test_moritz/player.gd" id="2_5f2ri"]
 [ext_resource type="Texture2D" uid="uid://bhapl67g3ud6f" path="res://test_moritz/icon.svg" id="3_mxv2n"]
 [ext_resource type="Texture2D" uid="uid://blt4cgcumwfw1" path="res://test_moritz/Assets/Sprites/Ground Tileset.png" id="4_ug6fx"]
+[ext_resource type="Texture2D" uid="uid://svqodqix2l4g" path="res://test_moritz/Assets/Sprites/tileset_test.png" id="5_gb3es"]
+[ext_resource type="PackedScene" uid="uid://1rw0lkssfixq" path="res://test_moritz/bounce_tile.tscn" id="6_n6x0v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w4yoy"]
 
@@ -95,6 +97,22 @@ texture = ExtResource("4_ug6fx")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lphxr")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n6x0v"]
+texture = ExtResource("5_gb3es")
+0:0/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+3:2/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yyc8s"]
+resource_name = "Bounce Tile"
+scenes/1/scene = ExtResource("6_n6x0v")
+
+[sub_resource type="TileSet" id="TileSet_qkmdp"]
+sources/0 = SubResource("TileSetAtlasSource_n6x0v")
+sources/1 = SubResource("TileSetScenesCollectionSource_yyc8s")
+
 [node name="Node2D" type="Node2D" unique_id=1136274975]
 script = ExtResource("1_gjin6")
 
@@ -115,5 +133,12 @@ tile_map_data = PackedByteArray("AAAAABIAAAADAAEAAAAAABMAAAADAAIAAAAAABQAAAADAAM
 tile_set = SubResource("TileSet_lx1sr")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1272020023]
+visible = false
 tile_map_data = PackedByteArray("AAD8/xIAAAAGAAEAAAD9/xIAAAAHAAEAAAD+/xIAAAAHAAEAAAD//xIAAAAHAAEAAAAAABIAAAAHAAEAAAAEABIAAAAHAAEAAAAFABIAAAAHAAEAAAAGABIAAAAHAAEAAAAHABIAAAAHAAEAAAAIABIAAAAHAAEAAAAMABIAAAAHAAEAAAANABIAAAAHAAEAAAAOABIAAAAHAAEAAAAPABIAAAAHAAEAAAAQABIAAAAHAAEAAAAUABIAAAAHAAEAAAAVABIAAAAHAAEAAAAWABIAAAAHAAEAAAAaABIAAAAHAAEAAAAbABIAAAAHAAEAAAAcABIAAAAHAAEAAAAdABIAAAAHAAEAAAAeABIAAAAHAAEAAAAfABIAAAAHAAEAAAAgABIAAAAHAAEAAAAhABIAAAAHAAEAAAAiABIAAAAHAAEAAAAmABIAAAAHAAEAAAAnABIAAAAHAAEAAAAoABIAAAAHAAEAAAApABIAAAAHAAEAAAAqABIAAAAIAAEAAAARABIAAAAHAAEAAAASABIAAAAHAAEAAAATABIAAAAHAAEAAAA=")
 tile_set = SubResource("TileSet_7fdg7")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=868245518]
+tile_map_data = PackedByteArray("AAAYABEAAQAAAAAAAQA=")
+tile_set = SubResource("TileSet_qkmdp")
+
+[connection signal="body_entered" from="TileMapLayer3/InteractiveTile" to="TileMapLayer3/InteractiveTile" method="_on_body_entered"]

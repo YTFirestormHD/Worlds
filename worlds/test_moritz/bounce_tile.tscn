@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://1rw0lkssfixq"]
+
+[ext_resource type="PackedScene" uid="uid://cwh8xbxqsbou0" path="res://test_moritz/interactive_tile.tscn" id="1_7d3np"]
+[ext_resource type="Script" uid="uid://6dq50gtibhpb" path="res://test_moritz/bounce_tile.gd" id="2_n4e2n"]
+[ext_resource type="Texture2D" uid="uid://cit74cdvvq4tn" path="res://test_moritz/Assets/Sprites/bounce_tile.png" id="3_q321b"]
+
+[node name="InteractiveTile" unique_id=1109891180 instance=ExtResource("1_7d3np")]
+script = ExtResource("2_n4e2n")
+bounce_force = 300.0
+
+[node name="Sprite2D" parent="." index="0" unique_id=380900102]
+texture_filter = 1
+texture = ExtResource("3_q321b")
