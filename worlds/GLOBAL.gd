@@ -1,12 +1,4 @@
-class_name BounceTile
-extends InteractiveTile
-
-
-@export var bounce_force: float = 300.0
-
-
-func interact(player: CharacterBody2D) -> void:
-	player.velocity.y = (-bounce_force*2)
+extends Node
 
 
 # Called when the node enters the scene tree for the first time.
