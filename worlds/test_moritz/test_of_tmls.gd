@@ -10,24 +10,15 @@ var start_pos = Vector2i(301,244)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	tml_1.visible = true
-	tml_2.visible = false
+	tml_1.enabled = true
+	tml_2.enabled = false
 
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("interact_e") and not locked:
 		locked = true
-		if tml_1.visible == true:
-			tml_1.visible = false
-			tml_2.visible = true
-			tml_1.collision_enabled = tml_1.visible
-			tml_2.collision_enabled = tml_2.visible
-		else:
-			tml_1.visible = true
-			tml_2.visible = false
-			tml_1.collision_enabled = tml_1.visible
-			tml_2.collision_enabled = tml_2.visible
-		print("success")
+		tml_2.enabled = tml_1.enabled
+		tml_1.enabled = not tml_1.enabled
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
