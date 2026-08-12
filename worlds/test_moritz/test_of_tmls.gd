@@ -13,6 +13,8 @@ func _ready() -> void:
 	tml_1.visible = true
 	tml_2.visible = false
 
+func test() -> void:
+	pass
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("interact_e") and not locked:
