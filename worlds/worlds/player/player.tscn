@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bqs3w43pgqa6q"]
+
+[ext_resource type="Script" uid="uid://ss423arg6h2h" path="res://worlds/player/player.gd" id="1_3rdvd"]
+[ext_resource type="Texture2D" uid="uid://bhapl67g3ud6f" path="res://test_moritz/icon.svg" id="2_n53cn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xagb"]
+size = Vector2(16, 32)
+
+[node name="player" type="CharacterBody2D" unique_id=1863259176]
+script = ExtResource("1_3rdvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916049610]
+scale = Vector2(0.1796875, 0.25)
+texture = ExtResource("2_n53cn")
+
+[node name="player_rect" type="CollisionShape2D" parent="." unique_id=256790167]
+shape = SubResource("RectangleShape2D_7xagb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1539792122]
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 4.0

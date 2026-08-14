@@ -5,9 +5,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5uobq"]
 size = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkmdp"]
-size = Vector2(16, 16)
-
 [node name="InteractiveTile" type="Area2D" unique_id=1109891180]
 script = ExtResource("1_7xltq")
 
@@ -15,10 +12,5 @@ script = ExtResource("1_7xltq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909258231]
 shape = SubResource("RectangleShape2D_5uobq")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=332514746]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1334901651]
-shape = SubResource("RectangleShape2D_qkmdp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

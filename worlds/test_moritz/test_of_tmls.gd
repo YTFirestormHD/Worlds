@@ -1,8 +1,8 @@
 extends Node2D
 @onready var tml_1: TileMapLayer = $TileMapLayer
 @onready var tml_2: TileMapLayer = $TileMapLayer2
-@onready var player: CollisionShape2D = $player/player_rect
-
+const PLAYER_SCENE = preload("res://worlds/player/player.tscn")
+var player: Node2D
 
 var locked = false
 var locked_timer = 0
@@ -10,6 +10,9 @@ var start_pos = Vector2i(301,244)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	player = PLAYER_SCENE.instantiate()
+	player.global_position = start_pos
+	add_child(player)
 	tml_1.enabled = true
 	tml_2.enabled = false
 
