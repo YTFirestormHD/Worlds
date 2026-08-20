@@ -18,7 +18,7 @@ config/icon="res://test_moritz/icon.svg"
 
 [autoload]
 
-input_buffer="*uid://dj4l68qgdx3cr"
+input_buffer="uid://dj4l68qgdx3cr"
 Global="*uid://bynct6pqtqvsi"
 
 [debug]
@@ -81,4 +81,5 @@ common/physics_interpolation=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

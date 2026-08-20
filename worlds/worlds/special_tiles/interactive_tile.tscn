@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dkmioyhace3xf"]
+
+[ext_resource type="Script" uid="uid://dwko11g7lnha8" path="res://worlds/special_tiles/interactive_tile.gd" id="1_0mahh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brlcu"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75rhp"]
+size = Vector2(16, 16)
+
+[node name="InteractiveTile" type="Area2D" unique_id=433460531]
+script = ExtResource("1_0mahh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2137021693]
+shape = SubResource("RectangleShape2D_brlcu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1684384932]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=237712099]
+shape = SubResource("RectangleShape2D_75rhp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

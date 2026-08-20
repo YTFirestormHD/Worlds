@@ -1,15 +1,15 @@
-class_name InteractiveTile_test #make class accessible (so child classes can be created)
+class_name InteractiveTile #make class accessible (so child classes can be created)
 extends Area2D
 
 
 func interact(player: CharacterBody2D) -> void:
+	print("interact")
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		interact(body)
-
-
+		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

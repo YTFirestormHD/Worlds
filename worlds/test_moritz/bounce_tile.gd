@@ -1,5 +1,5 @@
-class_name BounceTile
-extends InteractiveTile
+class_name BounceTile_test
+extends InteractiveTile_test
 
 
 @export var bounce_force: float = 300.0
