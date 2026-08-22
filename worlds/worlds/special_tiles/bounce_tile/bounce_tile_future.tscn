@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cr4rssaosbxuf"]
+
+[ext_resource type="PackedScene" uid="uid://dmdl326mo3gmg" path="res://worlds/special_tiles/bounce_tile/bounce_tile.tscn" id="1_yvtlr"]
+
+[node name="BounceTile" unique_id=433460531 instance=ExtResource("1_yvtlr")]

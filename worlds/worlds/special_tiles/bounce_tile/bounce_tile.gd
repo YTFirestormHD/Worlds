@@ -2,7 +2,14 @@ class_name BounceTile
 extends InteractiveTile
 
 
-@export var bounce_force: float = 400.0
+@export_range(0,2) var variant: int = 0 #0 = past; 1 = present; 2 = future
+
+@export var past_sprite: SpriteFrames
+@export var present_sprite: SpriteFrames
+@export var future_sprite: SpriteFrames
+
+
+@export var bounce_force: float = 450.0
 
 @onready var collision_shape: CollisionShape2D = $StaticBody2D/CollisionShape2D
 
@@ -17,7 +24,7 @@ func interact(player: CharacterBody2D) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

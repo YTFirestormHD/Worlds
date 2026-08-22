@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cjqu8h1ghmof2"]
+
+[ext_resource type="PackedScene" uid="uid://dmdl326mo3gmg" path="res://worlds/special_tiles/bounce_tile/bounce_tile.tscn" id="1_12wcx"]
+[ext_resource type="SpriteFrames" uid="uid://07r3q6upr5gf" path="res://worlds/special_tiles/bounce_tile/bounce_tile_past.tres" id="2_w2ne1"]
+
+[node name="BounceTile" unique_id=433460531 instance=ExtResource("1_12wcx")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=451004797]
+sprite_frames = ExtResource("2_w2ne1")

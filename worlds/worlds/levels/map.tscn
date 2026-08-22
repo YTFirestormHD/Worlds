@@ -1,74 +1,28 @@
 [gd_scene format=4 uid="uid://djka0grm4celr"]
 
-[ext_resource type="Texture2D" uid="uid://bbxbagxxeo067" path="res://worlds/levels/assets/trying_things_01.png" id="1_cbiv5"]
-[ext_resource type="PackedScene" uid="uid://dmdl326mo3gmg" path="res://worlds/special_tiles/bounce_tile/bounce_tile.tscn" id="2_8xsyy"]
+[ext_resource type="TileSet" uid="uid://d184y04ohhmoh" path="res://worlds/levels/assets/test_tile_set.tres" id="1_rht04"]
 [ext_resource type="PackedScene" uid="uid://bqs3w43pgqa6q" path="res://worlds/player/player.tscn" id="2_rht04"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rht04"]
-texture = ExtResource("1_cbiv5")
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:5/0 = 0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:5/0 = 0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:1/0 = 0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:1/0 = 0
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:1/0 = 0
-11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:2/0 = 0
-11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:1/0 = 0
-12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:1/0 = 0
-13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:2/0 = 0
-13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:3/0 = 0
-13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:4/0 = 0
-13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:2/0 = 0
-12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0a5qj"]
-scenes/1/scene = ExtResource("2_8xsyy")
-
-[sub_resource type="TileSet" id="TileSet_bmfeb"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_rht04")
-sources/1 = SubResource("TileSetScenesCollectionSource_0a5qj")
 
 [node name="Map" type="Node2D" unique_id=103072202]
 
 [node name="tml_past" type="TileMapLayer" parent="." unique_id=1715854029]
+visible = false
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAQAA0AAAAFAAEAAAARAA0AAAAFAAEAAAASAA0AAAAFAAEAAAAbAA0AAAAHAAEAAAAcAA0AAAAHAAEAAAAdAA0AAAAHAAEAAAAeAA0AAAAHAAEAAAANAA0AAAAFAAEAAAAOAA0AAAAFAAEAAAAPAA0AAAAFAAEAAAAVAA0AAQAAAAAAAQA=")
-tile_set = SubResource("TileSet_bmfeb")
+tile_map_data = PackedByteArray("AAAQAA0AAAAFAAEAAAARAA0AAAAFAAEAAAASAA0AAAAFAAEAAAANAA0AAAAFAAEAAAAOAA0AAAAFAAEAAAAPAA0AAAAFAAEAAAASAAwAAQAAAAAAAgA=")
+tile_set = ExtResource("1_rht04")
 
 [node name="tml_present" type="TileMapLayer" parent="." unique_id=1962557692]
+tile_map_data = PackedByteArray("AAANAA0AAAAHAAEAAAAOAA0AAAAHAAEAAAAPAA0AAAAHAAEAAAAQAA0AAAAHAAEAAAARAA0AAAAHAAEAAAASAA0AAAAHAAEAAAASAAwAAQAAAAAAAQA=")
+tile_set = ExtResource("1_rht04")
 
 [node name="tml_future" type="TileMapLayer" parent="." unique_id=790844315]
+visible = false
+tile_map_data = PackedByteArray("AAANAA0AAAAJAAEAAAAOAA0AAAAJAAEAAAAPAA0AAAAJAAEAAAAQAA0AAAAJAAEAAAARAA0AAAAJAAEAAAASAA0AAAAJAAEAAAASAAwAAQAAAAAAAwA=")
+tile_set = ExtResource("1_rht04")
 
 [node name="player" parent="." unique_id=1863259176 instance=ExtResource("2_rht04")]
 position = Vector2(219, 164)
 
 [connection signal="body_entered" from="tml_past/BounceTile" to="tml_past/BounceTile" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/BounceTile" to="tml_present/BounceTile" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_future/BounceTile" to="tml_future/BounceTile" method="_on_body_entered"]

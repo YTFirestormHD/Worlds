@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bygus83tyqwyx" path="res://test_moritz/test_of_tmls.gd" id="1_gjin6"]
 [ext_resource type="Texture2D" uid="uid://blt4cgcumwfw1" path="res://test_moritz/Assets/Sprites/Ground Tileset.png" id="4_ug6fx"]
-[ext_resource type="PackedScene" uid="uid://1rw0lkssfixq" path="res://test_moritz/bounce_tile.tscn" id="6_n6x0v"]
+[ext_resource type="PackedScene" uid="uid://1rw0lkssfixq" path="res://test_moritz/bounce_tile_past.tscn" id="6_n6x0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fng13"]
 texture = ExtResource("4_ug6fx")
@@ -154,11 +154,4 @@ modulate = Color(0.25132802, 0.42196253, 0.8928933, 1)
 position = Vector2(903, 641.25)
 shape = SubResource("RectangleShape2D_ogjwg")
 
-[connection signal="body_entered" from="TileMapLayer/InteractiveTile" to="TileMapLayer/InteractiveTile" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/InteractiveTile" to="TileMapLayer2/InteractiveTile" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@54746" to="TileMapLayer2/@Area2D@54746" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@54747" to="TileMapLayer2/@Area2D@54747" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@54748" to="TileMapLayer2/@Area2D@54748" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@54749" to="TileMapLayer2/@Area2D@54749" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@54750" to="TileMapLayer2/@Area2D@54750" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="death_bottom"]

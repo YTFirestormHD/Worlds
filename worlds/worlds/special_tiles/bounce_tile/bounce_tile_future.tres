@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cjvytgr8anpxo"]
+
+[ext_resource type="Texture2D" uid="uid://clo4h8frk72b7" path="res://worlds/special_tiles/bounce_tile/bounce_tile_future-Sheet.png" id="1_tafb1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoxwf"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3naiq"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnnqf"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuv5b"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuqca"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhmk2"]
+atlas = ExtResource("1_tafb1")
+region = Rect2(80, 0, 16, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_aoxwf")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_3naiq")
+}, {
+"duration": 15.0,
+"texture": SubResource("AtlasTexture_rnnqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuv5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuqca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhmk2")
+}],
+"loop": 0,
+"name": &"bounce",
+"speed": 10.0
+}]
