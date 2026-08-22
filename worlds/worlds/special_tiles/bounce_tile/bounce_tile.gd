@@ -3,7 +3,7 @@ extends InteractiveTile
 
 
 
-@export var bounce_force: float = 450.0
+@export var bounce_force: float = 500.0
 
 @onready var collision_shape: CollisionShape2D = $StaticBody2D/CollisionShape2D
 
@@ -18,7 +18,12 @@ func interact(player: CharacterBody2D) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	
+	#usually, resources are shaped by instances of a scene
+	#this means, that if the collision shape of one tile is changed,
+	#the  collision shapes of all tiles will be changed
+	#to prevent this we need to duplicate the collision shape
+	collision_shape.shape = collision_shape.shape.duplicate()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

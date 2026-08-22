@@ -2,9 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dkmioyhace3xf" path="res://worlds/special_tiles/interactive_tile.tscn" id="1_k6cta"]
 [ext_resource type="Script" uid="uid://ctos5uxrl0u3e" path="res://worlds/special_tiles/bounce_tile/bounce_tile.gd" id="2_bnhuc"]
-[ext_resource type="SpriteFrames" uid="uid://07r3q6upr5gf" path="res://worlds/special_tiles/bounce_tile/bounce_tile_past.tres" id="3_4i0gi"]
 [ext_resource type="SpriteFrames" uid="uid://cjvytgr8anpxo" path="res://worlds/special_tiles/bounce_tile/bounce_tile_future.tres" id="3_p4o4e"]
-[ext_resource type="SpriteFrames" uid="uid://dgocbgqrbyrc0" path="res://worlds/special_tiles/bounce_tile/bounce_tile_present.tres" id="4_6e8yk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6cta"]
 size = Vector2(16, 17)
@@ -14,11 +12,7 @@ size = Vector2(16, 16)
 
 [node name="BounceTile" unique_id=433460531 instance=ExtResource("1_k6cta")]
 script = ExtResource("2_bnhuc")
-variant = 0
-past_sprite = ExtResource("3_4i0gi")
-present_sprite = ExtResource("4_6e8yk")
-future_sprite = ExtResource("3_p4o4e")
-bounce_force = 450.0
+bounce_force = 500.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=451004797]
 position = Vector2(0, -8)
