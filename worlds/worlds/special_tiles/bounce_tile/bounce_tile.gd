@@ -2,12 +2,6 @@ class_name BounceTile
 extends InteractiveTile
 
 
-@export_range(0,2) var variant: int = 0 #0 = past; 1 = present; 2 = future
-
-@export var past_sprite: SpriteFrames
-@export var present_sprite: SpriteFrames
-@export var future_sprite: SpriteFrames
-
 
 @export var bounce_force: float = 450.0
 
