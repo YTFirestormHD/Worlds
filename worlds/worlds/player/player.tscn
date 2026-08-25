@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhapl67g3ud6f" path="res://test_moritz/icon.svg" id="2_n53cn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xagb"]
-size = Vector2(16, 32)
+size = Vector2(22, 32)
 
 [node name="player" type="CharacterBody2D" unique_id=1863259176]
 script = ExtResource("1_3rdvd")

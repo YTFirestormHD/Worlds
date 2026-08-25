@@ -33,10 +33,13 @@ func _process(delta: float) -> void:
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	
+	#return to default texture after playing animation
 	$AnimatedSprite2D.frame = 0
 
 func _on_animated_sprite_2d_frame_changed() -> void:
 	
+	#while playing the animation, the collision shape needs to take different sizes
+	#according to the current frame
 	match $AnimatedSprite2D.frame:
 		0:
 			collision_shape.shape.size.y = 16

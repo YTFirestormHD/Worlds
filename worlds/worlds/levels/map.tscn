@@ -6,11 +6,13 @@
 [node name="Map" type="Node2D" unique_id=103072202]
 
 [node name="tml_past" type="TileMapLayer" parent="." unique_id=1715854029]
+visible = false
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAQAA0AAAAFAAEAAAARAA0AAAAFAAEAAAASAA0AAAAFAAEAAAANAA0AAAAFAAEAAAAOAA0AAAAFAAEAAAAPAA0AAAAFAAEAAAASAAwAAQAAAAAAAgATAA0AAAAFAAEAAAATAAwAAAAFAAEAAAATAAsAAAAFAAEAAAATAAYAAAAFAAEAAAATAAoAAAAFAAEAAAATAAkAAAAFAAEAAAATAAgAAAAFAAEAAAATAAcAAAAFAAEAAAAUAA0AAAAFAAEAAAAVAA0AAAAFAAEAAAAWAA0AAAAFAAEAAAAXAA0AAAAFAAEAAAAYAA0AAAAFAAEAAAAZAA0AAAAFAAEAAAAaAA0AAAAFAAEAAAAUAAwAAQAAAAAAAgA=")
 tile_set = ExtResource("1_rht04")
 
 [node name="tml_present" type="TileMapLayer" parent="." unique_id=1962557692]
+visible = false
 tile_map_data = PackedByteArray("AAANAA0AAAAHAAEAAAAOAA0AAAAHAAEAAAAPAA0AAAAHAAEAAAAQAA0AAAAHAAEAAAARAA0AAAAHAAEAAAASAA0AAAAHAAEAAAASAAwAAQAAAAAAAQATAA0AAAAHAAEAAAATAAwAAAAHAAEAAAATAAsAAAAHAAEAAAATAAYAAAAHAAEAAAATAAoAAAAHAAEAAAATAAkAAAAHAAEAAAATAAgAAAAHAAEAAAATAAcAAAAHAAEAAAAUAA0AAAAHAAEAAAAVAA0AAAAHAAEAAAAWAA0AAAAHAAEAAAAXAA0AAAAHAAEAAAAYAA0AAAAHAAEAAAAZAA0AAAAHAAEAAAAaAA0AAAAHAAEAAAAUAAwAAQAAAAAAAQA=")
 tile_set = ExtResource("1_rht04")
 
@@ -21,9 +23,9 @@ tile_set = ExtResource("1_rht04")
 [node name="player" parent="." unique_id=1863259176 instance=ExtResource("2_rht04")]
 position = Vector2(219, 164)
 
-[connection signal="body_entered" from="tml_past/BounceTile" to="tml_past/BounceTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_past/@Area2D@52478" to="tml_past/@Area2D@52478" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/BounceTile" to="tml_present/BounceTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@52476" to="tml_present/@Area2D@52476" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_past/@Area2D@23394" to="tml_past/@Area2D@23394" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_past/@Area2D@23395" to="tml_past/@Area2D@23395" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@23396" to="tml_present/@Area2D@23396" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@23397" to="tml_present/@Area2D@23397" method="_on_body_entered"]
 [connection signal="body_entered" from="tml_future/BounceTile" to="tml_future/BounceTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_future/@Area2D@52477" to="tml_future/@Area2D@52477" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_future/@Area2D@23398" to="tml_future/@Area2D@23398" method="_on_body_entered"]
