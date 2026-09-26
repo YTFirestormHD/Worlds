@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dtj26so6r3i84"]
+
+[ext_resource type="Script" uid="uid://b4chqmif02eh5" path="res://worlds/player/airjump.gd" id="1_3t5fo"]
+
+[node name="Airjump" type="Node2D" unique_id=475600409]
+script = ExtResource("1_3t5fo")
+
+[node name="cooldown" type="Timer" parent="." unique_id=1471093551]
