@@ -2,22 +2,38 @@
 
 [ext_resource type="Script" uid="uid://ss423arg6h2h" path="res://worlds/player/player.gd" id="1_3rdvd"]
 [ext_resource type="Texture2D" uid="uid://bhapl67g3ud6f" path="res://test_moritz/icon.svg" id="2_n53cn"]
+[ext_resource type="PackedScene" uid="uid://rjovi5t557ct" path="res://worlds/player/dash.tscn" id="3_n53cn"]
+[ext_resource type="PackedScene" uid="uid://dtj26so6r3i84" path="res://worlds/player/airjump.tscn" id="4_tw8ga"]
+[ext_resource type="PackedScene" uid="uid://2u1oqo02etsk" path="res://worlds/player/dimension_handler.tscn" id="5_tw8ga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xagb"]
-size = Vector2(22, 32)
+size = Vector2(15.5, 32)
 
 [node name="player" type="CharacterBody2D" unique_id=1863259176]
+floor_block_on_wall = false
+safe_margin = 0.001
 script = ExtResource("1_3rdvd")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916049610]
-scale = Vector2(0.1796875, 0.25)
-texture = ExtResource("2_n53cn")
 
 [node name="player_rect" type="CollisionShape2D" parent="." unique_id=256790167]
 shape = SubResource("RectangleShape2D_7xagb")
+
+[node name="Sprite2D" type="Sprite2D" parent="player_rect" unique_id=916049610]
+position = Vector2(-5.9604645e-08, -4.246831e-07)
+scale = Vector2(0.12500001, 0.25)
+texture = ExtResource("2_n53cn")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1539792122]
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 4.0
+
+[node name="Jump_buffer" type="Timer" parent="." unique_id=953599191]
+wait_time = 0.1
+one_shot = true
+
+[node name="Dash" parent="." unique_id=1393271195 instance=ExtResource("3_n53cn")]
+
+[node name="Airjump" parent="." unique_id=475600409 instance=ExtResource("4_tw8ga")]
+
+[node name="DimensionHandler" parent="." unique_id=224719298 instance=ExtResource("5_tw8ga")]

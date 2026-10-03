@@ -10,3 +10,5 @@ one_shot = true
 
 [node name="dash_cd" type="Timer" parent="." unique_id=1259163789]
 one_shot = true
+
+[connection signal="timeout" from="dash_cd" to="." method="_on_dash_cd_timeout"]

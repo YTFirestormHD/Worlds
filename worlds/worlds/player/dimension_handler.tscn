@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://2u1oqo02etsk"]
+
+[ext_resource type="Script" uid="uid://bf7oo0ecksrun" path="res://worlds/player/dimension_handler.gd" id="1_mc61r"]
+
+[node name="DimensionHandler" type="Node2D" unique_id=224719298]
+script = ExtResource("1_mc61r")
