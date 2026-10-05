@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ss423arg6h2h" path="res://worlds/player/player.gd" id="1_3rdvd"]
 [ext_resource type="Texture2D" uid="uid://bhapl67g3ud6f" path="res://test_moritz/icon.svg" id="2_n53cn"]
+[ext_resource type="Script" uid="uid://ddjlfty8dvunu" path="res://worlds/player/camera_2d.gd" id="3_eglx7"]
 [ext_resource type="PackedScene" uid="uid://rjovi5t557ct" path="res://worlds/player/dash.tscn" id="3_n53cn"]
 [ext_resource type="PackedScene" uid="uid://dtj26so6r3i84" path="res://worlds/player/airjump.tscn" id="4_tw8ga"]
 [ext_resource type="PackedScene" uid="uid://2u1oqo02etsk" path="res://worlds/player/dimension_handler.tscn" id="5_tw8ga"]
@@ -27,6 +28,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 4.0
+script = ExtResource("3_eglx7")
 
 [node name="Jump_buffer" type="Timer" parent="." unique_id=953599191]
 wait_time = 0.1
