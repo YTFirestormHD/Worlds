@@ -184,6 +184,9 @@ sources/4 = SubResource("TileSetAtlasSource_n6x0v")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogjwg"]
 size = Vector2(4016.5, 203.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5uxa"]
+size = Vector2(1420.5, 436)
+
 [node name="Node2D" type="Node2D" unique_id=1136274975]
 script = ExtResource("1_gjin6")
 
@@ -209,4 +212,17 @@ shape = SubResource("RectangleShape2D_ogjwg")
 
 [node name="DimensionHandler" parent="." unique_id=224719298 instance=ExtResource("6_yyc8s")]
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=350093459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=223789011 groups=["cam_limit"]]
+position = Vector2(609.75, 216)
+shape = SubResource("RectangleShape2D_p5uxa")
+
+[connection signal="body_entered" from="tml_past/InteractiveTile" to="tml_past/InteractiveTile" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/InteractiveTile" to="tml_present/InteractiveTile" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@52161" to="tml_present/@Area2D@52161" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@52162" to="tml_present/@Area2D@52162" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@52163" to="tml_present/@Area2D@52163" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@52164" to="tml_present/@Area2D@52164" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@52165" to="tml_present/@Area2D@52165" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="death_bottom"]
