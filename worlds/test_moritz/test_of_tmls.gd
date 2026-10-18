@@ -14,6 +14,7 @@ func _ready() -> void:
 	player = PLAYER_SCENE.instantiate()
 	player.global_position = start_pos
 	add_child(player)
+	GLOBAL.latest_safe_pos = player.global_position
 	tml_past.enabled = true
 	tml_present.enabled = false
 
@@ -33,11 +34,3 @@ func _process(delta: float) -> void:
 	if locked_timer == 60:
 		locked = false
 		locked_timer = 0
-
-
-func death_bottom(body: Node2D) -> void:
-	player.velocity.y = 0
-	#print("Entered node")
-	player.global_position = start_pos
-	#print(player.global_position)
-	pass # Replace with function body.

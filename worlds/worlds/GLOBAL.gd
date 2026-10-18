@@ -1,6 +1,8 @@
 extends Node
 
 var active_layer
+var latest_safe_pos
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

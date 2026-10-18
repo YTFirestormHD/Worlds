@@ -18,7 +18,7 @@ config/icon="res://test_moritz/icon.svg"
 
 [autoload]
 
-Global="*uid://bynct6pqtqvsi"
+GLOBAL="*uid://bynct6pqtqvsi"
 
 [debug]
 

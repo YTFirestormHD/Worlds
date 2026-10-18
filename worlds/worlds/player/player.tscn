@@ -25,7 +25,7 @@ texture = ExtResource("2_n53cn")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1539792122]
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
+position_smoothing_speed = 7.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 4.0
 script = ExtResource("3_eglx7")

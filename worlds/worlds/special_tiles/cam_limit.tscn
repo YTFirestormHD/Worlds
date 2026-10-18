@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d3qumv7qse6ap"]
+
+[ext_resource type="Script" uid="uid://pg13kyew3ym0" path="res://test_moritz/cam_limit.gd" id="1_lg6nd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5uxa"]
+size = Vector2(64, 64)
+
+[node name="cam_limit" type="Area2D" unique_id=1441450960]
+script = ExtResource("1_lg6nd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=876584666]
+shape = SubResource("RectangleShape2D_p5uxa")
+debug_color = Color(0.060029082, 0.6295628, 0.46850306, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
