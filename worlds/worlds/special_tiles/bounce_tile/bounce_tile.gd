@@ -10,7 +10,6 @@ extends InteractiveTile
 
 func interact(player: CharacterBody2D) -> void:
 	
-
 	player.velocity.y = (-bounce_force) #change player velocity to move upward
 	
 	$AnimatedSprite2D.play("bounce")

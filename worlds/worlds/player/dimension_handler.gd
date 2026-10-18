@@ -31,8 +31,6 @@ func _input(event: InputEvent) -> void:
 		match current_tml:
 			"tml_present":
 				current_tml = "tml_future"
-			"tml_future":
-				current_tml = "tml_past"
 			"tml_past":
 				current_tml = "tml_present"
 	if event.is_action_pressed("interact_q"):
@@ -41,6 +39,4 @@ func _input(event: InputEvent) -> void:
 				current_tml = "tml_past"
 			"tml_future":
 				current_tml = "tml_present"
-			"tml_past":
-				current_tml = "tml_future"
 	update_tml()
