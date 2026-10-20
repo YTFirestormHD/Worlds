@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btntaq15gq2yn"]
+
+[ext_resource type="PackedScene" uid="uid://dkmioyhace3xf" path="res://worlds/special_tiles/interactive_tile.tscn" id="1_56p8r"]
+[ext_resource type="SpriteFrames" uid="uid://cjvytgr8anpxo" path="res://worlds/special_tiles/bounce_tile/bounce_tile_future.tres" id="2_ciqts"]
+[ext_resource type="Script" uid="uid://b3gexq6ocvps4" path="res://worlds/special_tiles/remote_move_tile/remote_move_tile.gd" id="2_clnhb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clnhb"]
+size = Vector2(26, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u87m4"]
+size = Vector2(16, 16)
+
+[node name="RemoteMoveTile" unique_id=433460531 instance=ExtResource("1_56p8r")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=622550277]
+position = Vector2(0, -8)
+sprite_frames = ExtResource("2_ciqts")
+animation = &"bounce"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=2137021693]
+shape = SubResource("RectangleShape2D_clnhb")
+script = ExtResource("2_clnhb")
+
+[node name="StaticBody2D" parent="." index="2" unique_id=1684384932]
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=237712099]
+shape = SubResource("RectangleShape2D_u87m4")

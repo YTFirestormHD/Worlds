@@ -218,13 +218,5 @@ shape = SubResource("RectangleShape2D_5p84i")
 position = Vector2(608, 524)
 shape = SubResource("RectangleShape2D_m5mni")
 
-[connection signal="body_entered" from="tml_past/InteractiveTile" to="tml_past/InteractiveTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/InteractiveTile" to="tml_present/InteractiveTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@55102" to="tml_present/@Area2D@55102" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@55103" to="tml_present/@Area2D@55103" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@55104" to="tml_present/@Area2D@55104" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@55105" to="tml_present/@Area2D@55105" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@55106" to="tml_present/@Area2D@55106" method="_on_body_entered"]
-
 [editable path="cam_limit"]
 [editable path="death_plane"]
