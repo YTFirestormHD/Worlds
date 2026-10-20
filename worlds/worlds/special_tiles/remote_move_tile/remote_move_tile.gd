@@ -1,12 +1,13 @@
-extends CollisionShape2D
+class_name RemoteMoveTile
+extends InteractiveTile
 
 
 func interact(player: CharacterBody2D) -> void:
-	print("hiiii")
-	while player.global_position.distance_to(self.global_position):
-		print("so true")
-	
-
+	#print(player.global_position.distance_to(self.global_position))
+	await Input.is_action_just_pressed("dash")
+	print("test")
+	#while player.global_position.distance_to(self.global_position) < 20:	
+		
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
