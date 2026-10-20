@@ -11,6 +11,7 @@ size = Vector2(26, 16)
 size = Vector2(16, 16)
 
 [node name="RemoteMoveTile" unique_id=433460531 instance=ExtResource("1_56p8r")]
+script = ExtResource("2_clnhb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=622550277]
 position = Vector2(0, -8)
@@ -19,7 +20,6 @@ animation = &"bounce"
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=2137021693]
 shape = SubResource("RectangleShape2D_clnhb")
-script = ExtResource("2_clnhb")
 
 [node name="StaticBody2D" parent="." index="2" unique_id=1684384932]
 visible = false

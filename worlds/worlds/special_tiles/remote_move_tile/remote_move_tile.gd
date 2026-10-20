@@ -1,4 +1,5 @@
-extends CollisionShape2D
+class_name RemoteMoveTile
+extends InteractiveTile
 
 
 func interact(player: CharacterBody2D) -> void:

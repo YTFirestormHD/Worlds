@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nj3h8avy08f1"]
+
+[ext_resource type="Script" path="res://worlds/special_tiles/kill_zone.gd" id="1_5wkvc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5uxa"]
+size = Vector2(64, 64)
+
+[node name="kill_zone" type="Area2D" unique_id=597017854]
+script = ExtResource("1_5wkvc")
+
+[node name="kill_zone" type="CollisionShape2D" parent="." unique_id=1914387268]
+shape = SubResource("RectangleShape2D_p5uxa")
+debug_color = Color(0.96917397, 0.17807531, 5.7756904e-07, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
