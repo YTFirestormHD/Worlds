@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://blt4cgcumwfw1" path="res://test_moritz/Assets/Sprites/Ground Tileset.png" id="4_ug6fx"]
 [ext_resource type="PackedScene" uid="uid://1rw0lkssfixq" path="res://test_moritz/bounce_tile_past.tscn" id="6_n6x0v"]
 [ext_resource type="PackedScene" uid="uid://2u1oqo02etsk" path="res://worlds/player/dimension_handler.tscn" id="6_yyc8s"]
-[ext_resource type="PackedScene" uid="uid://d3qumv7qse6ap" path="res://worlds/special_tiles/cam_limit.tscn" id="8_1p381"]
-[ext_resource type="PackedScene" uid="uid://cnfdveu02rw0p" path="res://death_plane.tscn" id="8_5p84i"]
+[ext_resource type="PackedScene" uid="uid://d3qumv7qse6ap" path="res://worlds/special_tiles/cam_limit/cam_limit.tscn" id="8_1p381"]
+[ext_resource type="PackedScene" path="res://worlds/special_tiles/kill_zone/death_plane.tscn" id="8_5p84i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fng13"]
 texture = ExtResource("4_ug6fx")

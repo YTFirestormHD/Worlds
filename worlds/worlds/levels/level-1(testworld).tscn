@@ -6,7 +6,6 @@
 [node name="Map" type="Node2D" unique_id=103072202]
 
 [node name="tml_past" type="TileMapLayer" parent="." unique_id=1715854029 groups=["play_tmls"]]
-visible = false
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAUAA0ABwABAAMAAAATAA0ABwABAAMAAAASAA0ABwABAAMAAAARAA0ABwABAAMAAAAQAA0ABwABAAMAAAAPAA0ABwABAAMAAAAOAA0ABwABAAMAAAANAA0ABwABAAMAAAAMAA0ABwABAAMAAAALAA0ABwABAAMAAAAIAA0ABwABAAMAAAAHAA0ABwABAAMAAAAGAA0ABwABAAMAAAAFAA0ABwABAAMAAAAJAA0ABwABAAMAAAAKAA0ABwABAAMAAAA=")
 tile_set = ExtResource("1_uyldh")
@@ -16,7 +15,6 @@ tile_map_data = PackedByteArray("AAASAAwAAQAAAAAAAQAUAAwAAQAAAAAAAQAFAA0ABQAHAAE
 tile_set = ExtResource("1_uyldh")
 
 [node name="tml_future" type="TileMapLayer" parent="." unique_id=790844315 groups=["play_tmls"]]
-visible = false
 tile_map_data = PackedByteArray("AAASAAwAAQAAAAAAAwAUAAwAAQAAAAAAAwAFAA0ABAABAAEAAAAGAA0ABAABAAEAAAAHAA0ABAABAAEAAAAIAA0ABAABAAEAAAAJAA0ABAABAAEAAAAKAA0ABAABAAEAAAALAA0ABAABAAEAAAAMAA0ABAABAAEAAAANAA0ABAABAAEAAAAOAA0ABAABAAEAAAAPAA0ABAABAAEAAAAQAA0ABAABAAEAAAARAA0ABAABAAEAAAASAA0ABAABAAEAAAATAA0ABAABAAEAAAAUAA0ABAABAAEAAAA=")
 tile_set = ExtResource("1_uyldh")
 
@@ -24,7 +22,7 @@ tile_set = ExtResource("1_uyldh")
 position = Vector2(171, 165)
 
 [connection signal="body_entered" from="tml_present/BounceTile" to="tml_present/BounceTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_present/@Area2D@56658" to="tml_present/@Area2D@56658" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_present/@Area2D@74847" to="tml_present/@Area2D@74847" method="_on_body_entered"]
 [connection signal="body_entered" from="tml_present/RemoteMoveTile" to="tml_present/RemoteMoveTile" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_future/@Area2D@56685" to="tml_future/@Area2D@56685" method="_on_body_entered"]
-[connection signal="body_entered" from="tml_future/@Area2D@56686" to="tml_future/@Area2D@56686" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_future/@Area2D@74848" to="tml_future/@Area2D@74848" method="_on_body_entered"]
+[connection signal="body_entered" from="tml_future/@Area2D@74849" to="tml_future/@Area2D@74849" method="_on_body_entered"]
